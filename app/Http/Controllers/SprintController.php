@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 
-class sprintsController extends Controller
+use Illuminate\Http\Request;
+use App\Models\Sprint;
+class SprintController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class sprintsController extends Controller
      */
     public function index()
     {
-        $rows= sprints::all();
+        $rows = Sprint::all();
         return response()->json(
             [ 'data'=> $rows],200
         );

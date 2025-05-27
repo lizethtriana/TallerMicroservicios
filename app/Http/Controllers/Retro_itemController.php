@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 
-class retro_itemsController extends Controller
+use Illuminate\Http\Request;
+use App\Models\Retro_item;
+class Retro_itemController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class retro_itemsController extends Controller
      */
     public function index()
     {
-         $rows= retro_items::all();
+         $rows= Retro_item::all();
         return response()->json(
             [ 'data'=> $rows],200
         );

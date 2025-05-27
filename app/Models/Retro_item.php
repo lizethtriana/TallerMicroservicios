@@ -5,7 +5,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class retro_items extends Model
+class Retro_item extends Model
 {
     protected $table ="retro_items";
     public $timestamps = false;
