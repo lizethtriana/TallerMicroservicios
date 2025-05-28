@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Retrospectivas</title>
+  <link rel="stylesheet" href="style.css"> <!-- Archivo de estilos externo -->
+</head>
+<body>
+
+  <h1>Registro de Retrospectivas Scrum</h1>
+
+  <!-- Sección para crear una nueva retro -->
+  <section>
+    <h2>Crear Nueva Retro</h2>
+    <form id="form-retro">
+      <!-- ID del sprint -->
+      <label>
+        Sprint ID:
+        <input type="number" name="sprint_id" required>
+      </label>
+      <br>
+
+      <!-- Categoría seleccionable -->
+      <label>
+        Categoría:
+        <select name="categoria">
+          <option value="accion">Acción</option>
+          <option value="logro">Logro</option>
+          <option value="impedimento">Impedimento</option>
+          <option value="comentario">Comentario</option>
+          <option value="otro">Otro</option>
+        </select>
+      </label>
+      <br>
+
+      <!-- Descripción de la retro -->
+      <label>
+        Descripción:
+        <textarea name="descripcion" required></textarea>
+      </label>
+      <br>
+
+      <!-- Checkbox para saber si se cumplió -->
+      <label>
+        Cumplida:
+        <input type="checkbox" name="cumplida">
+      </label>
+      <br>
+
+      <!-- Fecha de revisión -->
+      <label>
+        Fecha Revisión:
+        <input type="date" name="fecha_revision">
+      </label>
+      <br>
+
+      <!-- Botón para guardar -->
+      <button type="submit">Guardar</button>
+    </form>
+  </section>
+
+  <!-- Sección donde se muestran las retros -->
+  <section>
+    <h2>Listado de Retrospectivas</h2>
+    <ul id="retro-items">
+      <!-- Aquí se agregan las retros con JavaScript -->
+    </ul>
+  </section>
+
+  <!-- Archivo JavaScript -->
+  <script src="script.js"></script>
+</body>
+</html>
