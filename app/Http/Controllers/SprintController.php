@@ -30,16 +30,12 @@ class SprintController extends Controller
     {
         $data = $request->all();
         $newModel = new Sprint();
-        $newModel->id = $data['pk'];
-        $newModel->nombre = $data['name'];
+        $newModel->nombre = $data['nombre'];
         $newModel->fecha_inicio = $data['fecha_inicio'];
         $newModel->fecha_fin = $data['fecha_fin'];
-        $newModel->created_at = $data['created_at'];
-        $newModel->updated_at = $data['updated_at'];
-        $newModel->cod = $data['code'];
         $newModel->save();
         return response()->json(
-            ['data' => $newModel],
+            ['data' =>  'Datos guardados'],
             201
         );
     }
@@ -71,8 +67,8 @@ class SprintController extends Controller
     {
            $data = $request->all();
         $row = Sprint::find($id);
-        $row->nombre = $data['name'];
-        $row->cod = $data['code'];
+        $row->nombre = $data['nombre'];
+    
         $row->save();
         return response()->json(
             ['data' => $row],
